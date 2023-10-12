@@ -13,15 +13,9 @@ import java.util.Optional;
 @Repository
 public class MemoryCandidateRepository implements CandidateRepository {
 
-    private static final MemoryCandidateRepository INSTANCE = new MemoryCandidateRepository();
-
     private int nextId = 1;
 
     private final Map<Integer, Candidate> candidates = new HashMap<>();
-
-    public static MemoryCandidateRepository getInstance() {
-        return INSTANCE;
-    }
 
     private MemoryCandidateRepository() {
         save(new Candidate(0, "Антонов Илья", "Java 17; Spring; PostgreSQL; HTML 5",
