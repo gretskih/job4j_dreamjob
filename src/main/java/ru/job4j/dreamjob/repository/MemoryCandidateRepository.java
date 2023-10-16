@@ -22,11 +22,11 @@ public class MemoryCandidateRepository implements CandidateRepository {
 
     private MemoryCandidateRepository() {
         save(new Candidate(0, "Антонов Илья", "Java 17; Spring; PostgreSQL; HTML 5",
-                LocalDateTime.of(2023, Month.OCTOBER, 1, 8, 30)));
+                LocalDateTime.of(2023, Month.OCTOBER, 1, 8, 30), 1));
         save(new Candidate(0, "Клушин Федор", "Java 8; Spring MVC; Junit 5; CSS",
-                LocalDateTime.of(2023, Month.OCTOBER, 4, 9, 30)));
+                LocalDateTime.of(2023, Month.OCTOBER, 4, 9, 30), 2));
         save(new Candidate(0, "Путин Петр", "Java 18; Spring Framework; Multithreading; J2E",
-                LocalDateTime.of(2023, Month.OCTOBER, 5, 8, 0)));
+                LocalDateTime.of(2023, Month.OCTOBER, 5, 8, 0), 3));
     }
 
     @Override
@@ -44,7 +44,7 @@ public class MemoryCandidateRepository implements CandidateRepository {
     @Override
     public boolean update(Candidate candidate) {
         return candidates.computeIfPresent(candidate.getId(), (id, oldCandidate) -> new Candidate(oldCandidate.getId(),
-                candidate.getName(), candidate.getDescription(), candidate.getCreationDate())) != null;
+                candidate.getName(), candidate.getDescription(), candidate.getCreationDate(), candidate.getCityId())) != null;
     }
 
     @Override
