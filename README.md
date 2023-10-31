@@ -13,24 +13,23 @@
 
 ## Инструменты
 
-- **Java 17**
+- **Java 18**
 - **Spring Boot 2.7.6**
-- **PostgreSQL 14**
+- **PostgreSQL 16**
 - **Slf4j**
 - **HTML 5**
 - **Thymeleaf 2.7.6**
 - **Bootstrap 4.4.1**
-- **H2database 1.4.2**
+- **H2database 2.2.220**
 - **SQL2o 1.6.0**
-- **Commons-dbcp2 2.9.0**
 - **Junit 5**
-- **Mockito 4.8.0**
+- **Mockito 5.2.0**
 - **Liquibase 4.15.0**
 - **Maven 3.8**
 - **Git**
 
 ## Требования к окружению
 
-- **Java 17**
+- **Java 18**
 - **Maven 3.8**
-- **PostgresSQL 14**
+- **PostgresSQL 16**

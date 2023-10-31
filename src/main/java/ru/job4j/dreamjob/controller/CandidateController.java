@@ -51,7 +51,7 @@ public class CandidateController {
     public String getById(Model model, @PathVariable int id) {
         var candidateOptional = candidateService.findById(id);
         if (candidateOptional.isEmpty()) {
-            model.addAttribute("message", "Кандидат с указанным идентификатором не найден");
+            model.addAttribute("message", "Кандидат с указанным идентификатором не найден.");
             return "errors/404";
         }
         model.addAttribute("cities", cityService.findAll());
